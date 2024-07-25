@@ -44,6 +44,7 @@ TYPE_TO_POURCENTAGE = {
     'int': '%d',
     'char': '%c',
     'char*': '%s',
+    'void': '%d',
 }
 
 DIC_VAR1 = {}
@@ -147,6 +148,10 @@ def var_t(c, v):
     if c[t-4:t-1] in TYPE_TO_POURCENTAGE:
         DIC_VAR1[v] = c[t:t+9]
         DIC_VAR2[v] = TYPE_TO_POURCENTAGE[c[t-4:t-1]]
+        v += 1
+    elif c[t-5:t-1] in TYPE_TO_POURCENTAGE:
+        DIC_VAR1[v] = c[t:t+9]
+        DIC_VAR2[v] = TYPE_TO_POURCENTAGE[c[t-5:t-1]]
         v += 1
     elif c[t-6:t-1] in TYPE_TO_POURCENTAGE:
         DIC_VAR1[v] = c[t:t+9]
@@ -304,7 +309,4 @@ def main():
         f.write(i + '\n')
     f.write("#endif /* !MY_H_ */")
     f.close()
-    os.system("gcc output.c -o output")
-    os.system("./output")
-    #os.system("rm output output.c my.h")
 main()
