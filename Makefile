@@ -17,6 +17,7 @@ SRC	=	my_compute_power_rec.bi 	\
 		my_strlen.bi 				\
 		my_strncat.bi 				\
 		my_strncmp.bi 				\
+		my_strncpy.bi 				\
 		my_str_to_word_array.bi		\
 
 NAME	=	libmy.a
