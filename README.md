@@ -2,8 +2,8 @@
 
 ## Description
 
-Is a mini lib **C** that we code during de first year at Epitech<br>
-Is quasily the same lib but with some modifications but the goal is the same.
+It is a mini **C** library that we coded during the first year at Epitech.<br>
+It is almost the same library but with some modifications, although the goal remains the same.
 
 ## Usage
 
